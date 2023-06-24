@@ -6,7 +6,6 @@ package controller;
 
 import dal.DAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -58,6 +57,7 @@ public class HomeServlet extends HttpServlet {
             }
         }
         
+        // Tạo số lượng ở icon giỏ hàng
         Cart cart = new  Cart(txt, list);
         List<Item> listItem = cart.getItems();
         int n;
