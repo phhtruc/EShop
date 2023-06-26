@@ -282,14 +282,22 @@
                                                 <input type="text" name="quant[3]" class="input-number"  data-min="1" data-max="100" value="${o.quantity}">
                                                 <div class="button plus">
                                                     <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[3]">
-                                                        <i class="ti-plus"></i>
+                                                        <a href="process?num=1&id=${i.product.id}"><i class="ti-plus"></i></a>
                                                     </button>
                                                 </div>
                                             </div>
                                             <!--/ End Input Order -->
                                         </td>
-                                        <td class="total-amount" data-title="Total"><span>$220.88</span></td>
-                                        <td class="action" data-title="Remove"><a href="#"><i class="ti-trash remove-icon"></i></a></td>
+                                        <td class="total-amount" data-title="Total"><span>$${i.getTotalMoney()}</span></td>
+                                        <td class="action" data-title="Remove">
+                                            <!--<a href="#"><i class="ti-trash remove-icon"></i></a>-->
+                                            <form action="process" method="post">
+                                                <input type="hidden" name="id" value="${i.product.id}"/>
+                                                <button type="submit" class="delete">
+                                                    <i class="ti-trash remove-icon"></i>
+                                                </button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 </c:forEach>
                             </tbody>
@@ -325,7 +333,7 @@
                                         </ul>
                                         <div class="button5">
                                             <a href="#" class="btn">Checkout</a>
-                                            <a href="#" class="btn">Continue shopping</a>
+                                            <a href="home" class="btn">Continue shopping</a>
                                         </div>
                                     </div>
                                 </div>
@@ -489,7 +497,7 @@
                                                     <i class="ti-minus"></i>
                                                 </button>
                                             </div>
-                                            <input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
+                                            ${i.quantity}
                                             <div class="button plus">
                                                 <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
                                                     <i class="ti-plus"></i>

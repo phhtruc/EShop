@@ -35,7 +35,7 @@ public class Cart {
         return null;
     }
     
-//    trả về số lượng của 1 sản phẩm để check xem còn hàng hay không
+//    trả về số lượng của sản phẩm trong giỏ hàng (mục đích để check xem còn hàng hay không)
     public int getQuantityById(int id){
         return getItemById(id).getQuantity();
     }
