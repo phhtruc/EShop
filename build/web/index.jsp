@@ -76,14 +76,14 @@
                     }
                 });
             }
-            
+
             // add to cart
             function buy(id) {
                 var m = document.f.num.value;// form có name=f & input=num
                 document.f.action = "buy?id=" + id + "&num=" + m;
                 document.f.submit();
             }
-            
+
         </script>
 
     </head>
@@ -191,35 +191,35 @@
                                     <a href="login" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="sinlge-bar shopping">
-                                    <a href="checkout.jsp" class="single-icon"><i class="ti-bag"></i> <span class="total-count">${size}</span></a>
+                                    <a href="cart" class="single-icon"><i class="ti-bag"></i> <span class="total-count">${size}</span></a>
                                     <!-- Shopping Item -->
-                                    <!--                                    <div class="shopping-item">
-                                                                            <div class="dropdown-cart-header">
-                                                                                <span>2 Items</span>
-                                                                                <a href="#">View Cart</a>
-                                                                            </div>
-                                                                            <ul class="shopping-list">
-                                                                                <li>
-                                                                                    <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                                                                    <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-                                                                                    <h4><a href="#">Woman Ring</a></h4>
-                                                                                    <p class="quantity">1x - <span class="amount">$99.00</span></p>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-                                                                                    <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-                                                                                    <h4><a href="#">Woman Necklace</a></h4>
-                                                                                    <p class="quantity">1x - <span class="amount">$35.00</span></p>
-                                                                                </li>
-                                                                            </ul>
-                                                                            <div class="bottom">
-                                                                                <div class="total">
-                                                                                    <span>Total</span>
-                                                                                    <span class="total-amount">$134.00</span>
-                                                                                </div>
-                                                                                <a href="checkout.jsp" class="btn animate">Checkout</a>
-                                                                            </div>
-                                                                        </div>-->
+<!--                                    <div class="shopping-item">
+                                        <div class="dropdown-cart-header">
+                                            <span>2 Items</span>
+                                            <a href="#">View Cart</a>
+                                        </div>
+                                        <ul class="shopping-list">
+                                            <li>
+                                                <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+                                                <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
+                                                <h4><a href="#">Woman Ring</a></h4>
+                                                <p class="quantity">1x - <span class="amount">$99.00</span></p>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
+                                                <a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
+                                                <h4><a href="#">Woman Necklace</a></h4>
+                                                <p class="quantity">1x - <span class="amount">$35.00</span></p>
+                                            </li>
+                                        </ul>
+                                        <div class="bottom">
+                                            <div class="total">
+                                                <span>Total</span>
+                                                <span class="total-amount">$134.00</span>
+                                            </div>
+                                            <a href="checkout.jsp" class="btn animate">Checkout</a>
+                                        </div>
+                                    </div>-->
                                     <!--/ End Shopping Item -->
                                 </div>
                             </div>
