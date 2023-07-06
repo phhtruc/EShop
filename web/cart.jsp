@@ -274,17 +274,20 @@
                                         <td class="price" data-title="Price"><span>$${o.product.price}</span></td>
                                         <td class="qty" data-title="Qty"><!-- Input Order -->
                                             <div class="input-group">
-                                                <div class="button minus">
-                                                    <button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[3]">
-                                                        <a href="process?num=-1&id=${i.product.id}"><i class="ti-minus"></i></a>
+<!--                                                <div class="button minus">
+                                                    <button type="button" class="btn btn-primary btn-number">
+                                                        <a href="process?num=-1&id=${o.product.id}"><i class="ti-minus"></i></a>
                                                     </button>
                                                 </div>
-                                                <input type="text" name="quant[3]" class="input-number"  data-min="1" data-max="100" value="${o.quantity}">
+                                                <input type="text" class="input-number" value="${o.quantity}">
                                                 <div class="button plus">
-                                                    <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[3]">
-                                                        <a href="process?num=1&id=${i.product.id}"><i class="ti-plus"></i></a>
+                                                    <button type="button" class="btn btn-primary btn-number">
+                                                        <a href="process?num=1&id=${o.product.id}"><i class="ti-plus"></i></a>
                                                     </button>
-                                                </div>
+                                                </div>-->
+                                                <button><a href="process?num=-1&id=${o.product.id}">-</a></button>
+                                                ${o.quantity}
+                                                <button><a href="process?num=1&id=${o.product.id}">+</a></button>
                                             </div>
                                             <!--/ End Input Order -->
                                         </td>

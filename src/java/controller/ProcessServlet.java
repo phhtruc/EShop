@@ -61,6 +61,7 @@ public class ProcessServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         DAO d = new DAO();
         List<Product> list = d.getAllProduct();
         
@@ -89,16 +90,16 @@ public class ProcessServlet extends HttpServlet {
             // So luong co trong kho
             int numStore = p.getQuantity();
             // trừ số lượng sp về = 0 thì xóa sp
-            if(num == -1 && cart.getQuantityById(id) <= 1){
+            if(num == -1 && (cart.getQuantityById(id) <= 1)){
                 cart.removeItem(id);
             }else{
                 // số lượng kho không đủ thì num = 0 để khong cộng thêm
-                if(num == 1 && cart.getQuantityById(id) > numStore){
+                if((num == 1) && cart.getQuantityById(id) >= numStore){
                     num = 0;
                 }
                 
                 // Sau khi điều chỉnh số lượng, xem như xóa sp cũ và tạo 1 sản phẩm với số lượng mới
-                double price=p.getPrice();
+                double price = p.getPrice();
                 Item t=new Item(p, num, price);
                 cart.addItem(t);
             }
