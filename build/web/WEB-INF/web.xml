@@ -44,6 +44,26 @@
         <servlet-name>ProcessServlet</servlet-name>
         <servlet-class>controller.ProcessServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListProductServlet</servlet-name>
+        <servlet-class>controller.ListProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>controller.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddProMana</servlet-name>
+        <servlet-class>controller.AddProMana</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditListProductServlet</servlet-name>
+        <servlet-class>controller.EditListProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoadFormEdit</servlet-name>
+        <servlet-class>controller.LoadFormEdit</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -87,6 +107,26 @@
     <servlet-mapping>
         <servlet-name>ProcessServlet</servlet-name>
         <url-pattern>/process</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListProductServlet</servlet-name>
+        <url-pattern>/listmanager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddProMana</servlet-name>
+        <url-pattern>/addpromana</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditListProductServlet</servlet-name>
+        <url-pattern>/edit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadFormEdit</servlet-name>
+        <url-pattern>/load</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

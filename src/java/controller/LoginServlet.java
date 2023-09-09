@@ -99,6 +99,8 @@ public class LoginServlet extends HttpServlet {
         else{
             HttpSession session = request.getSession();
             session.setAttribute("acc", cus);
+            //Customer c = (Customer) session.getAttribute("acc"); 
+            //Đoạn session.getAttribute("acc"); sẽ trả về String, nên cần ép kiểu về Acc hoặc Customer
             
             Cookie cu = new Cookie("user", name);
             Cookie cp = new Cookie("pass", pass);

@@ -182,13 +182,59 @@ public class DAO extends DBContext {
             ps.setString(6,cs.getPhone());
             ps.executeUpdate();
         }catch(SQLException e){
+        }
+    }
+    
+    // Xóa sản phẩm
+    public void deleteProduct(String id){
+       String sql = "delete from Product where id = ?";
+       try{
+           PreparedStatement ps = connection.prepareStatement(sql);
+           ps.setString(1, id);
+           ps.executeUpdate();
+       }catch(SQLException e){
+       }
+    }
+    
+    // add product
+    public void addProduct(Product p){
+        String sql="insert into Product (name, price, quantity, describe, image, cid) values (?,?,?,?,?,?)";
+        try{
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1,p.getName());
+            ps.setDouble(2,p.getPrice());
+            ps.setInt(3,p.getQuantity());
+            ps.setString(4,p.getDescribe());
+            ps.setString(5,p.getImage());
+            ps.setInt(6,p.getCid());
+            ps.executeUpdate();
+        }catch(SQLException e){
+        }
+    }
+    
+    // Edit product manager
+    public int EditProMana(Product p){
+        int k = 0;
+        String sql = "UPDATE dbo.Product SET name = ?, price = ?, quantity = ?, describe =  ?, image = ?, cid= ? WHERE id = ?";
+        try{
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, p.getName());
+            ps.setDouble(2, p.getPrice());
+            ps.setInt(3, p.getQuantity());
+            ps.setString(4, p.getDescribe());
+            ps.setString(5, p.getImage());
+            ps.setInt(6, p.getCid());
+            ps.setInt(7, p.getId());
+            k = ps.executeUpdate();
+        }catch(SQLException e){
             
         }
-        
+        return k;
     }
     
     public static void main(String[] args) {
         DAO d = new DAO();
+        d.deleteProduct("5");
     }
    
 }
