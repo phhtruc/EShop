@@ -38,8 +38,9 @@
    - **Port**: `1434`
 
 3. **Screenshots**:
-   - ![HeidiSQL Connection](path/to/heidisql-connection-screenshot1.png)
-   - ![HeidiSQL Connection](path/to/heidisql-connection-screenshot2.png)
+   - ![image](https://github.com/user-attachments/assets/60d62d65-26d6-4f73-a506-171c5233c7fc)
+   - ![image](https://github.com/user-attachments/assets/c39adc3f-38a7-4655-a51a-c83258c827e6)
+
 
 ### Using DBeaver to Connect
 
@@ -47,13 +48,17 @@
 2. **Connect to the database using the same details as HeidiSQL**.
 
 3. **Screenshots**:
-   - ![DBeaver Connection](path/to/dbeaver-connection-screenshot1.png)
-   - ![DBeaver Connection](path/to/dbeaver-connection-screenshot2.png)
+   - ![image](https://github.com/user-attachments/assets/9c14aad6-b315-4fae-b650-c9b80109ce4c)
+
 
 ### Run SQL Script
 
 1. **Copy the data from the `db.init.sql` file**.
-2. **Paste and run the script in HeidiSQL or DBeaver** to add data to the database.
+   - ![image](https://github.com/user-attachments/assets/53723dfe-6453-4137-b7fd-5fd54fb0a7df)
+
+3. **Paste and run the script in HeidiSQL or DBeaver** to add data to the database.
+   - ![image](https://github.com/user-attachments/assets/fd0fbe40-5641-4869-999f-03ffcb0efa9b)
+
 
 ## Testing the Data
 
